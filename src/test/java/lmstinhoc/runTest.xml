@@ -1,0 +1,20 @@
+<suite name="LMSsuite" >
+    <parameter name="browserType" value="chrome" />
+    <parameter name="webURL" value = "https://lms-dev.iigvietnam.com/auth/sign-in?to=%2F" />
+<!--    <parameter name="webURL" value = "https://lms-dev.iigvietnam.com/admin/dashboard" />-->
+
+    <test name="LMSsignInTest">
+        <classes>
+<!--            <class name="lmstinhoc.testcase.SignInTest">-->
+<!--            </class>-->
+<!--            <class name="lmstinhoc.testcase.BaseRun">-->
+<!--            </class>-->
+<!--            <class name="lmstinhoc.testcase.MonHoc_Test">-->
+<!--            </class>-->
+<!--            <class name="lmstinhoc.testcase.PhanCong_Test">-->
+<!--            </class>-->
+            <class name="lmstinhoc.testcase.HocVien_Test">
+            </class>
+        </classes>
+    </test>
+</suite>
