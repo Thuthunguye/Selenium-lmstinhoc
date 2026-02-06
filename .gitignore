@@ -36,3 +36,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Selenium / Allure ###
+allure-results/
+allure-report/
+Logs/
+Screenshots/
+exports/
+test-recordings/
+uploadFiles/
