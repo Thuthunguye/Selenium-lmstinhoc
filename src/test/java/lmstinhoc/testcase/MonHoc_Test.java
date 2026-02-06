@@ -1,12 +1,15 @@
 package lmstinhoc.testcase;
 
+//import lmstinhoc.base.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
+//@Listeners(TestListener.class)
 public class MonHoc_Test extends BaseRun {
 
     @BeforeClass
@@ -30,7 +33,8 @@ public class MonHoc_Test extends BaseRun {
 //        assertTrue(monHocPage.isSubjectDisplayed(subjectName));
         assertTrue(monHocPage.isSubjectDisplayed(subjectName));
         //EDIT
-        monHocPage.openEditPopup(subjectName);
+//        monHocPage.openEditPopup(subjectName);
+        monHocPage.openEditPopup(newName); //test chụp ảnh lỗi
         assertTrue(monHocPage.isEditPopupDisplayed());
         assertEquals(monHocPage.getNameInEditTextbox(), subjectName);
 

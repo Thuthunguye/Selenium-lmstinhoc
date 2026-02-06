@@ -15,7 +15,7 @@ public class MonHocPageUI {
     public static final String TITLE_POPUPEDIT = "XPATH=//div[text()='Sửa môn học']";
 
     //INPUT
-    public static final String INPUT_NAME_ADD = "XPATH=//div[text()='Thêm lớp học']/ancestor::div[contains(@class,'ant-modal-content')]//input[@id='modalForm_name']";
+    public static final String INPUT_NAME_ADD = "XPATH=//div[text()='Thêm môn học']/ancestor::div[contains(@class,'ant-modal-content')]//input[@id='modalForm_name']";
     public static final String INPUT_NAME_EDIT = "XPATH=//div[text()='Sửa môn học']/ancestor::div[contains(@class,'ant-modal-content')]//input[@id='modalForm_name']";
 
 

@@ -65,7 +65,6 @@ public class HocVienPageObject extends SideBarPageObject{
         clickToElement(HocVienPageUI.ICON_SUAHOCVIEN, fullName);
         waitForElementVisible(driver, HocVienPageUI.TITLE_POPUPEDIT, fullName);
         waitForElementVisible(driver, HocVienPageUI.INPUT_NAME_EDIT);
-
     }
 
     public boolean isEditPopupDisplayed() {

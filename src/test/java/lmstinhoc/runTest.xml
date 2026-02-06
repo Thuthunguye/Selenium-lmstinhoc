@@ -2,6 +2,12 @@
     <parameter name="browserType" value="chrome" />
     <parameter name="webURL" value = "https://lms-dev.iigvietnam.com/auth/sign-in?to=%2F" />
 <!--    <parameter name="webURL" value = "https://lms-dev.iigvietnam.com/admin/dashboard" />-->
+<!--    <listeners>-->
+<!--        <listener class-name="lmstinhoc.base.TestListener"/>-->
+<!--    </listeners>-->
+    <listeners>
+        <listener class-name="lmstinhoc.reportConfig.AllureTestListener"/>
+    </listeners>
 
     <test name="LMSsignInTest">
         <classes>
@@ -9,12 +15,12 @@
 <!--            </class>-->
 <!--            <class name="lmstinhoc.testcase.BaseRun">-->
 <!--            </class>-->
-<!--            <class name="lmstinhoc.testcase.MonHoc_Test">-->
-<!--            </class>-->
+            <class name="lmstinhoc.testcase.MonHoc_Test">
+            </class>
 <!--            <class name="lmstinhoc.testcase.PhanCong_Test">-->
 <!--            </class>-->
-            <class name="lmstinhoc.testcase.HocVien_Test">
-            </class>
+<!--            <class name="lmstinhoc.testcase.HocVien_Test">-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>
