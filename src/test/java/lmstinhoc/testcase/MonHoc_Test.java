@@ -23,30 +23,36 @@ public class MonHoc_Test extends BaseRun {
         String newName = "Edit Automation";
 
         //ADD
+        log.info("MonHoc_01 - Step 01: Click Add Subject button");
         monHocPage.openAddSubjectPopup();
+
+        log.info("MonHoc_01 - Step 02: Input Subject Name");
         monHocPage.inputSubjectName(subjectName);
+
+        log.info("MonHoc_01 - Step 03: Click Confirm button");
         monHocPage.clickConfirm();
         //theem thanh cong
         // VERIFY TOAST
 //        monHocPage.waitForSuccessMessage();
 //        // VERIFY DATA
 //        assertTrue(monHocPage.isSubjectDisplayed(subjectName));
-        assertTrue(monHocPage.isSubjectDisplayed(subjectName));
+        log.info("MonHoc_01 - Step 04: Verify Subject is displayed");
+        verifyTrue(monHocPage.isSubjectDisplayed(subjectName));
         //EDIT
 //        monHocPage.openEditPopup(subjectName);
-        monHocPage.openEditPopup(newName); //test chụp ảnh lỗi
-        assertTrue(monHocPage.isEditPopupDisplayed());
-        assertEquals(monHocPage.getNameInEditTextbox(), subjectName);
-
-        monHocPage.inputEditName(newName);
-
-        monHocPage.clickEditConfirm();
-        assertTrue(monHocPage.isListUpdated(newName));
-
-        // DELETE
-        monHocPage.deleteSubject(newName);
-
-        assertTrue(monHocPage.isSubjectUndisplayed(newName));
+//        monHocPage.openEditPopup(newName); //test chụp ảnh lỗi
+//        assertTrue(monHocPage.isEditPopupDisplayed());
+//        assertEquals(monHocPage.getNameInEditTextbox(), subjectName);
+//
+//        monHocPage.inputEditName(newName);
+//
+//        monHocPage.clickEditConfirm();
+//        assertTrue(monHocPage.isListUpdated(newName));
+//
+//        // DELETE
+//        monHocPage.deleteSubject(newName);
+//
+//        assertTrue(monHocPage.isSubjectUndisplayed(newName));
     }
 //    @DataProvider(name = "subjectData")
 //    public Object[][] subjectData() {

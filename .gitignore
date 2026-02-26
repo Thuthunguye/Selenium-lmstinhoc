@@ -40,7 +40,7 @@ build/
 ### Selenium / Allure ###
 allure-results/
 allure-report/
-Logs/
+log/
 Screenshots/
 exports/
 test-recordings/

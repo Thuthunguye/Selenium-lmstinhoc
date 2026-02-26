@@ -12,7 +12,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -213,6 +215,47 @@ public class BaseTest {
             System.out.println("Cannot stop record video: " + e.getMessage());
         }
     }
+    protected boolean verifyTrue(boolean condition) {
+        boolean pass = true;
+        try {
+            Assert.assertTrue(condition);
+            log.info("----------PASSED----------");
+        } catch (Throwable e) {
+            log.info("----------FAILED----------");
+            pass = false;
 
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
+
+    protected boolean verifyFalse(boolean condition) {
+        boolean pass = true;
+        try {
+            Assert.assertFalse(condition);
+            log.info("----------PASSED----------");
+        } catch (Throwable e) {
+            log.info("----------FAILED----------");
+            pass = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
+
+    protected boolean verifyEquals(Object actual, Object expected) {
+        boolean pass = true;
+        try {
+            Assert.assertEquals(actual, expected);
+            log.info("----------PASSED----------");
+        } catch (Throwable e) {
+            log.info("----------FAILED----------");
+            pass = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return pass;
+    }
 
 }
